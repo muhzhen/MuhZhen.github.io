@@ -695,7 +695,7 @@
 											<div class="message success">Your message is successfully sent...</div>
 											<div class="message danger">Sorry something went wrong!</div>
 											<!--Button-->
-											<button class="vlt-btn vlt-btn--primary vlt-btn--md">Contact Me</button>
+											<button class="vlt-btn vlt-btn--primary vlt-btn--md" onclick="gotowhatsapp()">Send Me WhatsApp</button>
 										</form>
 									</div>
 								</div>
@@ -716,6 +716,30 @@
 		
 	</footer>
 	<!--Libs-->
+
+
+	<script>
+		function gotowhatsapp(){
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var message = document.getElementById("message").value;
+
+			var url =
+			"https://wa.me/+6282259107415?text="+
+			"Halo nama saya " +
+			name + "." +
+			"%0a" +
+			" alamat email " +
+			email + "." +
+			"%0a" +
+			"Saya ingin menanyakan " +
+			message;
+
+			window.open(url,"_blank").focus();
+
+		}
+	</script>
+
 	<script src="assets/vendors/jquery-3.5.1.min.js"></script>
 	<script src="assets/scripts/vlt-plugins.min.js"></script>
 	<script src="assets/scripts/vlt-helpers.js"></script>
